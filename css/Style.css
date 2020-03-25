@@ -1,13 +1,13 @@
 
 :root{
 /* root colors */
-   --mainPrimaryColor:White;
+   --mainPrimaryColor      :White;
    --ColorGray             :#D2D5CE; 
-   --colorBrown:#9E8b68 ; 
-   --colorSand:#FFF7C6; 
-   --colorMustard:#FFc800; 
-   --colorred:#cc0701 ; 
-   --color2:; 
+   --colorBrown            :#9E8b68 ; 
+   --colorSand             :#FFF7C6; 
+   --colorMustard          :#FFc800; 
+   --colorRed              :#cc0701 ; 
+   
 }
 /* bodystyling */
 body{
