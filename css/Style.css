@@ -15,5 +15,6 @@
 }
 
 .hiddentext:hover {
-    color: black;    
+    color: rgb(255, 254, 254);
+    padding: 2%;   
 }
