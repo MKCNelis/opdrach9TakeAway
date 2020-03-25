@@ -1,5 +1,37 @@
 <?php
+    function SaveArray($p_aSaveArray) {
+        //change string into json compatible data
+        $aJSONArray = json_encode($p_aSaveArray);
+        //open the file in writing mode
+        $file = fopen('winkelwagen.json','w');
+        //change the files content of the opened file to what it already was + the new array
+        file_put_contents('winkelwagen.json', $aJSONArray);
+        //close the file
+        fclose($file);
+    }
 
+    function LoadArray() {
+        //open the file in reading mode
+        $file = fopen('winkelwagen.json','r');
+        //get the content of the opened file
+        $aJSONArray = file_get_contents('winkelwagen.json');
+        //change the read string to php compatible data
+        $aReadArray = json_decode($aJSONArray,TRUE);
+        //close the file
+        fclose($file);
+        //save the loaded data to be used in the page
+        return($aReadArray);
+    }
+    if(!empty($_POST)){
+        $sProductNaam   = $_POST['sProductNaam'];
+        $iPrijs         = $_POST['iPrijs'];
+        $iAantal        = $_POST['iAantal'];
+        
+        $aWinkelwagen = LoadArray();
+        $iRecordCounter = count($aWinkelwagen);
+        $aWinkelwagen[$iRecordCounter] = array($sProductNaam,$iPrijs,$iAantal);
+    }
+    $iTotaal = 0;
 ?>
 
 <!DOCTYPE html>
@@ -32,34 +64,77 @@
           </div>
         </div>
       </nav>
-    </br>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-          </div>
-        </div>
-      </nav>
     
-    <div class="box boxbackground hiddentext">
-       <h>
-           Dah food
-       </h>
-       <br>
-       <br>
-       <p>
-           Dah food is very good, and iet smolls dilish. very good stuf yes
-       </p>
+    <div class="row justify-content-center page-content">
+        <div class="Winkelmandje col-7">
+            <?php
+                if(file_exists('winkelwagen.json')) {
+                    $aWinkelwagen = LoadArray();
+                    foreach($aWinkelwagen as $iKey => $aContentArray){
+                        echo("<tr>"
+                        ."<td>".$aContentArray[0]."</td>"                                   //Product naam
+                        ."<td>".$aContentArray[2]."</td>"                                   //Aantal in winkelwagen
+                        ."<td>".($aContentArray[2]*$aContentArray[1])."</td>"               //Product prijs
+                        ."</tr>");
+                        $iTotaal = $iTotaal+$aContentArray[2];
+                    }
+                }
+                else{
+                    echo("looking prety empty here");
+                }
+            ?>
+        </div>
 
+        <div class="Winkelmandje col-3">
+            <div>
+                <?php
+                    if(file_exists('winkelwagen.json')) {
+                        echo("Betalingsmethode:<br>"
+                        ."<button class='MethodeKnoppen'><input type='radio' id='0'
+                        name='iBetalingsMethode' value='0'> 
+                        <label for='0'>Paypal</label></button><br>"                                  //value 0 = PayPal
+                        ."<button class='MethodeKnoppen'><input type='radio' id='1'
+                        name='iBetalingsMethode' value='1'> 
+                        <label for='1'>Ideal</label></button><br>"                                   //value 1 = Ideal
+                        ."<button class='MethodeKnoppen'><input type='radio' id='2'
+                        name='iBetalingsMethode' value='2'> 
+                        <label for='2'>AmazonPay</label></button><br>");                             //value 2 = AmazonPay
+                    }
+                    else {
+                        echo("Betalingsmethode:<br>"
+                        ."<button class='MethodeKnoppen'><input type='radio' id='0'
+                        name='iBetalingsMethode' value='0'> 
+                        <label for='0'>Paypal</label></button><br>"                                  //value 0 = PayPal
+                        ."<button class='MethodeKnoppen'><input type='radio' id='1'
+                        name='iBetalingsMethode' value='1'> 
+                        <label for='1'>Ideal</label></button><br>"                                   //value 1 = Ideal
+                        ."<button class='MethodeKnoppen'><input type='radio' id='2'
+                        name='iBetalingsMethode' value='2'> 
+                        <label for='2'>AmazonPay</label></button><br>");                             //value 2 = AmazonPay
+                    }
+                ?>
+            </div>
+            <div>
+                <table>
+                    <?php
+                        if(file_exists('winkelwagen.json')) {
+                            foreach($aWinkelwagen as $iKey => $aContentArray){
+                                
+                            }
+                            echo("Betalingsmethode:<br>"
+                                ."€".$iTotaal);
+                        }
+                        else {
+                            echo("Betalingsmethode:<br>"
+                                ."€0,00");
+                        }
+                    ?>
+                </table>
+            </div>
+        </div>
     </div>
-
-
+    
+    
 </body>
 
 </html>

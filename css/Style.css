@@ -10,8 +10,8 @@
    
 }
 /* bodystyling */
-body{
-  
+body {
+    background-color: var(--ColorGray);
 }
 
 .box{
@@ -32,4 +32,19 @@ body{
 
 .hiddentext:hover {
     color: black;    
+}
+
+.Winkelmandje {
+    border: 1px black dotted;
+}
+
+.page-content {
+    margin-top: 30px;
+    min-height: 250px;
+}
+
+.MethodeKnoppen {
+    width:          50%;
+    margin-left:    5%;
+    
 }
