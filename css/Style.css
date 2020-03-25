@@ -1,0 +1,19 @@
+.box{
+    width: 200px;
+    height: 150px;
+    transition: 1s;
+    background-color: brown;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    color: rgba(178, 34, 34, 0);
+}
+
+.box:hover {
+    width: 500px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.hiddentext:hover {
+    color: black;    
+}
