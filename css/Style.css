@@ -1,3 +1,24 @@
+.hiddentext:hover {
+    color: rgb(255, 254, 254);
+    padding: 2%;   
+}
+
+
+:root{
+/* root colors */
+   --mainPrimaryColor: White;
+   --ColorGray: #D2D5CE; 
+   --colorBrown: #9E8b68 ; 
+   --colorSand: #FFF7C6; 
+   --colorMustard: #FFc800; 
+   --colorred: #cc0701 ; 
+   --color2:; 
+}
+/* bodystyling */
+body{
+
+}
+
 .box{
     width: 200px;
     height: 150px;
@@ -12,9 +33,4 @@
     width: 500px;
     height: 200px;
     cursor: pointer;
-}
-
-.hiddentext:hover {
-    color: rgb(255, 254, 254);
-    padding: 2%;   
 }
