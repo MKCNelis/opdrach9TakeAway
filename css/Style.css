@@ -13,25 +13,3 @@
 body{
 
 }
-
-
-
-svg .steam { animation: radiate 520s infinite linear,  faded infinite 4s linear; stroke: rgba(255,255,255,.6); }
-#steam-1, #steam-5 {  animation: radiate 480s infinite linear, faded infinite 3s linear; }
-
-#steam-2 {  animation: radiate 400s infinite linear; }
-
-#steam-5 { animation: radiate 350s infinite linear; }
-
-
-@keyframes radiate {
-  0% { stroke-dashoffset: 1px;  }
-  100% { stroke-dashoffset: -10000px; }
-}
-
-@keyframes faded {
-  0% { opacity: 1; }
-  50% { opacity: .5; }
-  100% { opacity: 1; }
-
-}
