@@ -3,10 +3,10 @@
 /* root colors */
    --mainPrimaryColor      :White;
    --ColorGray             :#D2D5CE; 
-   --colorBrown            :#9E8b68 ; 
+   --colorBrown            :#9E8b68; 
    --colorSand             :#FFF7C6; 
    --colorMustard          :#FFc800; 
-   --colorRed              :#cc0701 ; 
+   --colorRed              :#cc0701; 
    
 }
 /* bodystyling */
@@ -15,24 +15,53 @@ body{
 }
 
 .box{
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     transition: 1s;
-    background-color: brown;
+    /* background-color: brown; */
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
     border-top-right-radius: 300px;
     border-bottom-right-radius: 300px;
-    color: rgba(178, 34, 34, 0);
-}
+    color: rgba(250, 4, 4, 0);
+    padding: 3%;
+    }
+
+
+.sushi1{
+    /* background-image: url(../afbeeldingen/luigi-pozzoli.jpg); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+}    
 
 .box:hover {
     width: 500px;
-    height: 200px;
+    height: 250px;
     cursor: pointer;
+    /* background-image: url(../afbeeldingen/luigi-pozzoli.jpg); */
+    background-size: 100%;
+    backdrop-filter: blur(5px);
 }
 
-.hiddentext:hover {
-    color: black;    
+
+.hiddentext {
+    color: rgb(255, 0, 0);
+    width: 301px;
+    height: 202px;
+    transition: 1s;
+    /* background-color: brown; */
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    color: rgba(250, 4, 4, 0);
+    padding: 3%;
 }
+
+
+
+
+
 
 .pagewidth{
     width: 80%;
@@ -43,8 +72,7 @@ body{
 .container_Big{
     
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0px auto;
     position: relative;
 }
 
@@ -52,8 +80,18 @@ body{
     text-align: right;
 }
 
+.alignerboxes{
+    padding: 4%;
+}
+
 .roundimage{
     border-bottom-left-radius: 70%;
     border-left: var(--ColorGray);
     border: 5px;
+    box-shadow: 0 0 8px 8px var(--colorRed) inset;
 }
+
+
+
+
+
