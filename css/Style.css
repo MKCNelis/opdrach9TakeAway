@@ -16,49 +16,40 @@ body{
 
 .box{
     width: 300px;
-    height: 200px;
+    height: 240px;
     transition: 1s;
     /* background-color: brown; */
-    border-top-left-radius: 150px;
-    border-bottom-left-radius: 150px;
     border-top-right-radius: 300px;
     border-bottom-right-radius: 300px;
-    color: rgba(250, 4, 4, 0);
-    padding: 3%;
-    }
+    color: rgba(178, 34, 34, 0);
+    /* background-image: url(../afbeeldingen/luigi-pozzoli.jpg);
+    background-size: 300px 250px;
+    background-repeat: no-repeat; */
+}
+
+.box:hover {
+    width: 450px;
+    height: 300px;
+    cursor: pointer;
+    /* background-image: url(../afbeeldingen/luigi-pozzoli.jpg);
+    background-size: 450px 300px;
+    background-repeat: no-repeat; */
+}
+
+
 
 
 .sushi1{
-    /* background-image: url(../afbeeldingen/luigi-pozzoli.jpg); */
-    background-size: 100%;
+    background-image: url(../afbeeldingen/luigi-pozzoli.jpg);
+    background-size: 300px 240px;
     background-repeat: no-repeat;
-}    
+} 
 
-.box:hover {
-    width: 500px;
-    height: 250px;
-    cursor: pointer;
-    /* background-image: url(../afbeeldingen/luigi-pozzoli.jpg); */
-    background-size: 100%;
-}
-
-
-.hiddentext {
-    color: rgb(255, 0, 0);
-    width: 300px;
-    height: 200px;
-    transition: 1s;
-    /* background-color: brown; */
-    border-top-left-radius: 150px;
-    border-bottom-left-radius: 150px;
-    border-top-right-radius: 300px;
-    border-bottom-right-radius: 300px;
-    color: rgba(250, 4, 4, 0);
-    padding: 3%;
-}
-
-
-
+.sushi1:hover{
+    background-image: url(../afbeeldingen/luigi-pozzoli.jpg);
+    background-size: 450px 300px;
+    background-repeat: no-repeat;
+} 
 
 
 
