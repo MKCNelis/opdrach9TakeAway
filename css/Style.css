@@ -83,3 +83,11 @@ body {
         top: 25%;
     }
 }
+
+.container_Big{
+
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: var(--colorSand);
+}
