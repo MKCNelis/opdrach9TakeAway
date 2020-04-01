@@ -11,8 +11,23 @@
 }
 /* bodystyling */
 body{
-  
+background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
+background-size: 50px 50px;
+animation: swiper 5s infinite;
+background-position: 0%,0%;
+
 }
+@keyframes swiper{
+    0%{
+background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
+ background-position: 0% 0%,0% 0%;
+    }
+    100%{
+background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
+ background-position: 50px 50px,50px 50px;
+    }
+}
+
 
 .box{
     width: 200px;
@@ -35,8 +50,8 @@ body{
 }
 .container_Big{
 
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
     background-color: var(--colorSand);
 }
