@@ -48,3 +48,38 @@ body {
     margin-left:    5%;
     
 }
+
+#complete {
+    height: 50px;
+    width: 50px;
+    background-color: var(--colorRed);
+    position: fixed;
+    animation: waiting 5s infinite;
+}
+
+@keyframes waiting {
+    0%{
+        right: 10%;
+        top: 25%;
+        rotate: 90deg;
+    }
+    25%{
+        right: 20%;
+        top: 25%;
+        rotate: 90deg;
+    }
+    50%{
+        right: 20%;
+        top: 35%;
+        rotate: 90deg;
+    }
+    75%{
+        right: 10%;
+        top: 35%;
+        rotate: 90deg;
+    }
+    100%{
+        right: 10%;
+        top: 25%;
+    }
+}

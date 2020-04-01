@@ -1,15 +1,4 @@
 <?php
-    function SaveArray($p_aSaveArray) {
-        //change string into json compatible data
-        $aJSONArray = json_encode($p_aSaveArray);
-        //open the file in writing mode
-        $file = fopen('winkelwagen.json','w');
-        //change the files content of the opened file to what it already was + the new array
-        file_put_contents('winkelwagen.json', $aJSONArray);
-        //close the file
-        fclose($file);
-    }
-
     function LoadArray() {
         //open the file in reading mode
         $file = fopen('winkelwagen.json','r');
@@ -21,18 +10,26 @@
         fclose($file);
         //save the loaded data to be used in the page
         return($aReadArray);
+        //run the function to reload the page
+        PlaceOrder();
     }
-    if(!empty($_POST)){
-        $sProductNaam   = $_POST['sProductNaam'];
-        $iPrijs         = $_POST['iPrijs'];
-        $iAantal        = $_POST['iAantal'];
-        
-        $iRecordCounter = count($aWinkelwagen);
-        $aWinkelwagen[$iRecordCounter] = array($sProductNaam,$iPrijs,$iAantal);
+
+    function ClearArray() {
+        //open the file in writing mode
+        $file = fopen('winkelwagen.json','r');
+        //clear the file
+        file_put_contents('');
     }
+
     $aWinkelwagen = LoadArray();
     $iTotaal = 0;
 ?>
+
+<script>
+    function PlaceOrder() {
+        document.reload();
+    }
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,13 +66,13 @@
             <div class="Winkelmandje col-7">
                 <table>
                     <tr>
-                        <th>Product</th>
-                        <th>Totale prijs</th>
-                        <th>Aantal</th>
+                        <th width="90%">Product</th>
+                        <th width="5%">Prijs</th>
+                        <th width="5%">Aantal</th>
                     </tr>
                     <?php
                         if(!empty($aWinkelwagen[0])) {
-                            foreach($aWinkelwagen as $iKey => $aContentArray){
+                            foreach($aWinkelwagen as $iKey => $aContentArray) {
                                 echo("<tr>"
                                 ."<td>".$aContentArray[0]."</td>"                                                 //Product naam
                                 ."<td align='right'>".number_format($aContentArray[2], 2, ".", "")."</td>"        //Product prijs
@@ -93,32 +90,34 @@
 
             <div class="Winkelmandje col-3">
                 <div>
-                    <table>
-                        <?php
-                            foreach($aWinkelwagen as $iKey => $aContentArray){
-                                echo("€".number_format(($aContentArray[2]*$aContentArray[1]), 2, '.', '')."<br>");
-                            }
-                            echo("€<b>".number_format(($iTotaal), 2, ".", "")."</b>");
-                        ?>
-                    </table>
+                    <?php
+                        foreach($aWinkelwagen as $iKey => $aContentArray) {
+                            echo("€".number_format(($aContentArray[2]*$aContentArray[1]), 2, '.', '')."<br>");
+                        }
+                        echo("<b>€".number_format(($iTotaal), 2, ".", "")."</b>");
+                    ?>
                 </div>
                 <div>
                     Betalingsmethode:<br>
                     <?php
                         echo("<button class='MethodeKnoppen'><input type='radio' id='0'
-                            name='iBetalingsMethode' value='0'> 
-                            <label for='0'>Paypal</label></button><br>"                                  //value 0 = PayPal
+                             name='iBetalingsMethode' value='0'> 
+                             <label for='0'>Paypal</label></button><br>"                                  //value 0 = PayPal
                             ."<button class='MethodeKnoppen'><input type='radio' id='1'
-                            name='iBetalingsMethode' value='1'> 
-                            <label for='1'>Ideal</label></button><br>"                                   //value 1 = Ideal
+                             name='iBetalingsMethode' value='1'> 
+                             <label for='1'>Ideal</label></button><br>"                                   //value 1 = Ideal
                             ."<button class='MethodeKnoppen'><input type='radio' id='2'
-                            name='iBetalingsMethode' value='2'> 
-                            <label for='2'>AmazonPay</label></button><br>");                             //value 2 = AmazonPay
+                             name='iBetalingsMethode' value='2'> 
+                             <label for='2'>AmazonPay</label></button><br>");                             //value 2 = AmazonPay
                     ?>
                 </div>
 
             </div>
         </div>
+
+        <div id="complete">
+        </div>
+
         
     </body>
 
