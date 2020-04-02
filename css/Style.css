@@ -110,7 +110,7 @@ div {
 
 .hiddentekst{
     color: var(#cc080100);
-}
+} */
 
 .Winkelmandje {
     border: 1px black dotted;
@@ -119,7 +119,7 @@ div {
 .page-content {
     margin-top: 30px;
     min-height: 250px;
-}
+} 
 
 .MethodeKnoppen {
     width:          50%;
@@ -133,6 +133,7 @@ div {
     background-color: var(--colorRed);
     position: fixed;
     animation: waiting 5s infinite;
+    
 }
 
 @keyframes waiting {
@@ -162,8 +163,7 @@ div {
     }
 }
 
-.container_Big{
-
+/* .container_Big{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
