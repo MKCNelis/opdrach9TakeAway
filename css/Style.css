@@ -12,7 +12,7 @@
 /* bodystyling */
 body{
 background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
-background-size: 500px 250px;
+background-size: 375px 187.5px;
 animation: swiper 6s infinite linear;
 background-position: 0%,0%;
 
@@ -25,19 +25,19 @@ background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif)
     }
     25%{
 background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
- background-position: 250px 250px,125px 125px;
+ background-position: 187.5px 187.5px,93.75px 93.75px;
     }
     50%{
         background-image: url(/afbeeldingen/pusheen2.gif),url(/afbeeldingen/pusheen.gif);
-        background-position: 500px 500px,250px 250px;
+        background-position: 375px 375px,187.5px 187.5px;
     }
     75%{
         background-image: url(/afbeeldingen/pusheen2.gif),url(/afbeeldingen/pusheen.gif);
-        background-position: 750px 750px,375px 375px;
+        background-position: 562.5px 562.5px,281.25px 281.25px;
     }
     100%{
             background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
-                background-position: 1000px 1000px,500px 500px;
+                background-position: 750px 750px,375px 375px;
     }
 }
 
