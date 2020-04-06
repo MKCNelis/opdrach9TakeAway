@@ -112,7 +112,7 @@ $iTotaal = 0;
         </h2
     </div>
     <div class="container aligner" style="background-color: var(--ColorGray);">
-        <img src="./Afbeeldingen/Sushi-1.jfif" alt="doet nie" width="34%" height="30%" class="roundimage" border="5">
+        <img src="./Afbeeldingen/MizutakiChickenHotPot.jpg" alt="doet nie" width="34%" height="30%" class="roundimage" border="5">
     </div>
     <hr>
     <div class="container alignerboxes" style="background-color: var(--ColorGray);">

@@ -80,7 +80,7 @@ $iTotaal = 0;
 <div class="container_Big" style="padding-left:60%;">
     <button>login</button>
     <button>registreren</button>
-    <button> <img src="./Afbeeldingen/street-food-cart.png" height="50px"></button>
+    <button> <img src="./Afbeeldingen/street-food-cart.png" height="50px"> </button>
 </div>
 </div>
 <div class="container_Big">
@@ -104,15 +104,10 @@ $iTotaal = 0;
     <div class="container_Big" style="background-color: var(--ColorGray);">
 
         <div class="container">
-            <h2>
-                <p>
-                    bij de hotpots krijgt u de ingredienten bezorgd u hoeft allen maar een pan een een warmteborn te hebben enn een beetjegeduld
-                    alle producten die geleverd worden zij par boiled zo dat de kans van voedsel vergifteging zo klein mogelijk is, de
-                </p>
-            </h2
+
         </div>
         <div class="container aligner" style="background-color: var(--ColorGray);">
-            <img src="./Afbeeldingen/Sushi-1.jfif" alt="doet nie" width="34%" height="30%" class="roundimage" border="5">
+            <img src="./Afbeeldingen/masaaki-komori-2TjDelq95rc-unsplash.jpg" alt="doet nie" width="34%" height="30%" class="roundimage" border="5">
         </div>
         <hr>
         <div class="container alignerboxes" style="background-color: var(--ColorGray);">
@@ -126,7 +121,7 @@ $iTotaal = 0;
                                 shoyu Ramen
                             </h>
                             <br>
-                            <img src="./afbeeldingen/MizutakiChickenHotPot.jpg" height="250px">
+                            <img src="./afbeeldingen/shoyuRamen.jpg" height="250px">
                             <p>
 
                                 <input type="hidden" name="sProductNaam" value="shoyu Ramen"><br>
@@ -167,7 +162,7 @@ $iTotaal = 0;
                         <!--                        <div class="ar-image">-->
                         <!--                            <div class="article-image">-->
                         <p>
-                            <br>green curry ramen conbines the the ramen from japan with the tast of Thai curry
+                            <br><h6>green curry ramen conbines the the ramen from japan with the tast of Thai curry</h6>
                             <br>laos leaves
                             <br>lemongrass,
                             <br>1 bunch scallions, sliced,
@@ -195,7 +190,7 @@ $iTotaal = 0;
                             <!--                            <div class="article-image">-->
                             <h>greencurry ramen</h>
                             <br>
-                            <img src="./afbeeldingen/porkhotpot.jpg" height="250px">
+                            <img src="./afbeeldingen/Green-Curry-Noodles-100.jpg" height="250px">
                             <br>
                             <input type="hidden" name="sProductNaam" value="greencurry ramen"><br>
                             <input type="hidden" name="fPrijs" value="9.75"><br>
@@ -217,11 +212,11 @@ $iTotaal = 0;
                                 mushroom tofuramen
                             </h>
                             <br>
-                            <img src="./afbeeldingen/VeganKimchiHotPot_wide-1024x575.jpg" height="250px">
+                            <img src="./afbeeldingen/mushroomtofu_.jpg" height="250px">
                             <p>
 
-                                <input type="hidden" name="sProductNaam" value="mushroomtofu ramen"><br>
-                                <input type="hidden" name="fPrijs" value="25.50"><br>
+                                <input type="hidden" name="sProductNaam" value="mushroom tofu ramen"><br>
+                                <input type="hidden" name="fPrijs" value="11.50"><br>
                                 <input type="number" name="iAantal">
                                 <button type="submit" onclick="ReloadPage()">add to kart</button>
                             </p>
@@ -235,7 +230,7 @@ $iTotaal = 0;
                     <div>
                         <!--                        <div class="ar-image">-->
                         <!--                            <div class="article-image">-->
-                        <p><br> powerful mushroom stock with tofu and an arragement of mushrooms
+                        <p><br><h6>powerful mushroom stock with tofu and an arragement of mushrooms</h6>
                             <br> topping
 
                             <br> shittake
