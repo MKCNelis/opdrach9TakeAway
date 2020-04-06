@@ -45,8 +45,8 @@ if(!empty($_POST)){
     $aWinkelwagen[$iRecordCounter] = array($sProductNaam,$fPrijs,$iAantal);
     //save the array to the file
     SaveArray($aWinkelwagen);
-    // header('location: sushi.php');
-    echo('<script>ReloadPage()</script>');
+    header('location: winkelwagen.php');
+
 }
 $iTotaal = 0;
 ?>
@@ -75,16 +75,27 @@ $iTotaal = 0;
     </script>
 </head>
 <body>
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>
+<a class="navbar-brand" href="#"><img src="./Afbeeldingen/noodlebowl.gif" height="50px"></a>
+<div class="container_Big" style="padding-left:60%;">
+    <button>login</button>
+    <button>registreren</button>
+    <button> <img src="./Afbeeldingen/street-food-cart.png" height="50px"></button>
+</div>
+</div>
+<div class="container_Big">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Sushi</a>
+            <a class="nav-item nav-link" href="noodles.php">noodles</a>
+            <a class="nav-item nav-link" href="Hotpot.php">Hotpot</a>
         </div>
     </div>
 </nav>
@@ -92,10 +103,15 @@ $iTotaal = 0;
 <div class="container_Big" style="background-color: var(--ColorGray);">
 
     <div class="container">
-        D
+        <h2>
+            <p>
+                bij de hotpots krijgt u de ingredienten bezorgd u hoeft allen maar een pan een een warmteborn te hebben enn een beetjegeduld
+                alle producten die geleverd worden zij par boiled zo dat de kans van voedsel vergifteging zo klein mogelijk is, de
+            </p>
+        </h2
     </div>
     <div class="container aligner" style="background-color: var(--ColorGray);">
-        <img src="./Afbeeldingen/Sushi-1.jfif" alt="doet nie" width="34%" height="30%" class="roundimage" border="5">
+        <img src="./Afbeeldingen/MizutakiChickenHotPot.jpg" alt="doet nie" width="34%" height="30%" class="roundimage" border="5">
     </div>
     <hr>
     <div class="container alignerboxes" style="background-color: var(--ColorGray);">
@@ -103,32 +119,92 @@ $iTotaal = 0;
             <div class="col-6">
                 <form method="POST">
                     <div>
-                        <div class="ar-image">
-                            <div class="article-image">
-                                <p>Lire plus<br>
-                                    <input type="hidden" name="sProductNaam" value="Chicken hotpot"><br>
-                                    <input type="hidden" name="fPrijs" value="3.52"><br>
-                                    <input type="number" name="iAantal">
-                                    <button type="submit" onclick="ReloadPage()">add to kart</button>
-                                </p>
-                            </div>
-                        </div>
+                        <!--                        <div class="ar-image">-->
+                        <!--                            <div class="article-image">-->
+                        <h>
+                            chicken
+                        </h>
+                        <br>
+                        <img src="./afbeeldingen/MizutakiChickenHotPot.jpg" height="250px">
+                        <p>
+
+                            <input type="hidden" name="sProductNaam" value="chicken hotpot"><br>
+                            <input type="hidden" name="fPrijs" value="24.75"><br>
+                            <input type="number" name="iAantal">
+                            <button type="submit" onclick="ReloadPage()">add to kart</button>
+                        </p>
+                        <!--                            </div>-->
+                        <!--                        </div>-->
                     </div>
                 </form>
             </div>
             <div class="col-6">
+
+                <div>
+                    <!--                        <div class="ar-image">-->
+                    <!--                            <div class="article-image">-->
+                    <p><br>2 tbsp cooking oil
+                        <br> 1cabbage
+                        <br> 1green onion
+                        <br> maitake mushrooms
+                        <br> 2firm tofu
+                        <br> 1shitake
+                        <br> 1chicken tight
+                        <br> kombu
+                        <br>
+
+                    </p>
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                </div>
+
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-6">
+
+                    <div>
+<!--                        <div class="ar-image">-->
+<!--                            <div class="article-image">-->
+                        <p>
+                            <br>15 baby carrots
+                            <br>2 medium white turnips
+                            <br></br>1/4 pounds boneless pork shoulder,
+                            <br>1 bunch scallions, sliced,
+                            <br>reduced-sodium chicken broth
+                            <br>soy sauce
+                            <br>20 grams brown sugar
+                            <br> 10gram minced fresh ginger
+                            <br>5ml rice vinegar
+                            <br>10mlChinese chile-garlic sauce
+                            <br>4 cloves garlic, minced
+                            <br>1 star anise pod
+                            <br>1 cinnamon stick
+                            <br>20gram cornstarch mixed
+                            <br>some toasted sesame seeds,
+                            <br>
+
+                        </p>
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+
+            </div>
+            <div class="col-6">
                 <form method="POST">
                     <div>
-                        <div class="ar-image">
-                            <div class="article-image">
-                                <p>Lire plus<br>
-                                    <input type="hidden" name="sProductNaam" value="pork Hotpot"><br>
-                                    <input type="hidden" name="fPrijs" value="3.52"><br>
-                                    <input type="number" name="iAantal">
-                                    <button type="submit" onclick="ReloadPage()">add to kart</button>
-                                </p>
-                            </div>
-                        </div>
+<!--                        <div class="ar-image">-->
+<!--                            <div class="article-image">-->
+                        <h>pork</h>
+                        <br>
+                        <img src="./afbeeldingen/porkhotpot.jpg" height="250px">
+                        <br>
+                        <input type="hidden" name="sProductNaam" value="pork Hotpot"><br>
+                        <input type="hidden" name="fPrijs" value="26.75"><br>
+                        <input type="number" name="iAantal">
+                        <button type="submit" onclick="ReloadPage()">add to kart</button>
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </form>
             </div>
@@ -137,39 +213,50 @@ $iTotaal = 0;
             <div class="col-6">
                 <form method="POST">
                     <div>
-                        <div class="ar-image">
-                            <div class="article-image">
-                                <p>Lire plus<br>
+<!--                        <div class="ar-image">-->
+<!--                            <div class="article-image">-->
+                                <h>
+                                    vegan
+                                </h>
+                                <br>
+                                <img src="./afbeeldingen/VeganKimchiHotPot_wide-1024x575.jpg" height="250px">
+                                <p>
+
                                     <input type="hidden" name="sProductNaam" value="vegan hotpot"><br>
-                                    <input type="hidden" name="fPrijs" value="3.52"><br>
+                                    <input type="hidden" name="fPrijs" value="25.50"><br>
                                     <input type="number" name="iAantal">
                                     <button type="submit" onclick="ReloadPage()">add to kart</button>
                                 </p>
-                            </div>
-                        </div>
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </form>
             </div>
             <div class="col-6">
-                <form method="POST">
+
                     <div>
-                        <div class="ar-image">
-                            <div class="article-image">
-                                <p>Lire plus<br>
-                                    <input type="hidden" name="sProductNaam" value="sushi 4"><br>
-                                    <input type="hidden" name="fPrijs" value="3.52"><br>
-                                    <input type="number" name="iAantal">
-                                    <button type="submit" onclick="ReloadPage()">add to kart</button>
+<!--                        <div class="ar-image">-->
+<!--                            <div class="article-image">-->
+                                <p><br>2 tbsp cooking oil
+                                    <br> 1 tbsp garlic
+                                    <br> 1 cup vegan kimchi
+                                    <br> 2 tbsp Korean chili
+                                    <br> 2 tbsp sugar
+                                    <br> 1/4 tbsp salt
+                                    <br> 1 tbsp mushroom seasoning optional
+                                    <br> 2 cup vegetable broth
+                                    <br>
+
                                 </p>
-                            </div>
-                        </div>
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
-                </form>
+
             </div>
         </div>
     </div>
     <div id="bConfirmation"></div>
-
+</div>
 </body>
 
 <script>
