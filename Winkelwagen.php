@@ -48,16 +48,29 @@
     </head>
 
     <body>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>
+            <a class="navbar-brand" href="index.html"><img src="./afbeeldingen/noodlebowl.gif" height="50px"></a>
+        <div class="container_Big" style="padding-left:60%;">
+            <button>login</button>
+            <button>registreren</button>
+            <button> <img src="./afbeeldingen/street-food-cart.png" height="50px"></button>
+            </div>
+            </div>
+        
+        <!-- <img src="/afbeeldingen/pusheen.gif" alt="cat"> -->
+        <div class="container_Big">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Hotpot</a>
+                <a class="nav-item nav-link" href="sushi.php">Sushi</a>
+                <a class="nav-item nav-link" href="noodeles.html">noodels</a>
+                <a class="nav-item nav-link" href="Hotpot.html">Hotpot</a>
             </div>
             </div>
         </nav>
@@ -74,10 +87,10 @@
                         if(!empty($aWinkelwagen[0])) {
                             foreach($aWinkelwagen as $iKey => $aContentArray) {
                                 echo("<tr>"
-                                ."<td>".$aContentArray[0]."</td>"                                                 //Product naam
-                                ."<td align='right'>".$aContentArray[1]."</td>"                                   //Product prijs
-                                ."<td align='right'>".$aContentArray[2]."</td>"                                   //Aantal in winkelwagen
-                                ."</tr>");
+                                    ."<td>".$aContentArray[0]."</td>"                                                 //Product naam
+                                    ."<td align='right'>".$aContentArray[1]."</td>"                                   //Product prijs
+                                    ."<td align='right'>".$aContentArray[2]."</td>"                                   //Aantal in winkelwagen
+                                    ."</tr>");
                                 $iTotaal = number_format($iTotaal+($aContentArray[2]*$aContentArray[1]), 2, ".", "");
                             }
                         }
