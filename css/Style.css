@@ -15,6 +15,7 @@ background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif)
 background-size: 500px 250px;
 animation: swiper 6s infinite linear;
 background-position: 0%,0%;
+background-color: var(--colorBrown);
 
 
 }
@@ -47,129 +48,7 @@ background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif)
     height: 150px;
     width: 240px;
   }
-  .article-image:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-image: url(../afbeeldingen/luigi-pozzoli.jpg);
-    background-size: 100%;
-    -webkit-filter: grayscale(0) blur(0);
-    filter: grayscale(0) blur(0);
-    transition: .4s ease-in-out;
-    border-top-right-radius: 300px;
-    border-bottom-right-radius: 300px;
-    background-repeat: no-repeat;
-  }
-  .article-image:hover:before {
-    -webkit-filter: grayscale(100%) blur(2px);
-    filter: grayscale(100%) blur(2px);
-    transition: .4s ease-in-out;
-    height: 300px;
-    width: 480px;
-  }
-  .ar-image {
-    position: relative;
-    width: 238px;
-    height: 150px;
-  }
-  .article-image > p {
-    display: none;
-  }
-  .article-image:hover > p {
-    position: absolute;
-    top: 40%;
-    display: block;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: bold;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: .4s ease-in-out;
-  }
-
-/* .foodimg{
-    position:absolute;
-    top:0;
-    bottom:0;
-    margin:auto;
-    width:auto;
-    height:auto;
-    max-height: calc(100% - 50%);
-} */
-
-
-
-
-
-
-
-
-
-
-
-/* .box{
-    width: 300px;
-    height: 240px;
-    transition: 1s;
-
-    border-top-right-radius: 300px;
-    border-bottom-right-radius: 300px;
-    color: rgba(178, 34, 34, 0);
-    background-image: url(../afbeeldingen/luigi-pozzoli.jpg);
-    background-size: 300px 250px;
-    background-repeat: no-repeat;
-}
-
-.box:hover {
-    width: 450px;
-    height: 300px;
-    cursor: pointer;
-    background-image: url(../afbeeldingen/luigi-pozzoli.jpg);
-    background-size: 450px 300px;
-    background-repeat: no-repeat;
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
-}
-
-.hiddentekst{
-    color: var(#cc080100);
-}
-
-.hiddentekst:hover{
-    color: var(--colorRed);
-    z-index: 99;
-}
-
-span {
-    font-size:50px;
-    font-weight:bold;
-    position:relative;
-    position:absolute;
-    z-index:9999;
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: blur(0px);
-} */
-
-
-/* .sushi1{
-    background-image: url(../afbeeldingen/luigi-pozzoli.jpg);
-    background-size: 300px 240px;
-    background-repeat: no-repeat;
-} 
-
-.sushi1:hover{
-    background-image: url(../afbeeldingen/luigi-pozzoli.jpg);
-    background-size: 450px 300px;
-    background-repeat: no-repeat;
-}  */
+  
 
 
 
@@ -203,6 +82,11 @@ span {
 }
 
 
-
+.backgound-dragon{
+    background-image: url(../afbeeldingen/Afbeelding1.1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-blend-mode: darken;
+}
 
 
