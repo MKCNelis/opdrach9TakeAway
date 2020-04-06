@@ -155,6 +155,7 @@ $iTotaal = 0;
 
                 </div>
             </div>
+            <hr>
             <div class="row" >
                 <div class="col-6">
 
@@ -181,7 +182,6 @@ $iTotaal = 0;
                         <!--                            </div>-->
                         <!--                        </div>-->
                     </div>
-
                 </div>
                 <div class="col-6">
                     <form method="POST">
@@ -202,6 +202,7 @@ $iTotaal = 0;
                     </form>
                 </div>
             </div>
+            <hr>
             <div class="row" >
                 <div class="col-6">
                     <form method="POST">
@@ -226,7 +227,6 @@ $iTotaal = 0;
                     </form>
                 </div>
                 <div class="col-6">
-
                     <div>
                         <!--                        <div class="ar-image">-->
                         <!--                            <div class="article-image">-->
@@ -246,6 +246,46 @@ $iTotaal = 0;
                         <!--                        </div>-->
                     </div>
 
+                </div>
+            </div>
+            <hr>
+            <div class="row" >
+                <div class="col-6">
+
+                    <div>
+                        <!--                        <div class="ar-image">-->
+                        <!--                            <div class="article-image">-->
+                        <p>
+                            <br><h6>a selection of instant noodles</h6>
+                        <br>Demae Ramen Instant Noedels Sesam 100 gram
+                        <br>Demae Ramen Instant Noedels beef 100 gram
+                        <br>Demae Ramen Instant Noedels chicken 100 gram
+                        <br> Demae Ramen Instant Noedels srimp 100 gram
+                        <br> Demae Ramen Instant Noedels 100 gram
+
+
+                        </p>
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+                <div class="col-6">
+                    <form method="POST">
+                        <div>
+                            <!--                        <div class="ar-image">-->
+                            <!--                            <div class="article-image">-->
+                            <h>greencurry ramen</h>
+                            <br>
+                            <img src="./afbeeldingen/matt-chris-pua-vQQJeTpBmmM-unsplash.jpg" height="250px">
+                            <br>
+                            <input type="hidden" name="sProductNaam" value="instant ramen"><br>
+                            <input type="hidden" name="fPrijs" value="5.75"><br>
+                            <input type="number" name="iAantal">
+                            <button type="submit" onclick="ReloadPage()">add to kart</button>
+                            <!--                            </div>-->
+                            <!--                        </div>-->
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

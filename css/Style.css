@@ -15,7 +15,7 @@ background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.
 background-size: 375px 187.5px;
 animation: swiper 6s infinite linear;
 background-position: 0%,0%;
-background-color:  var(--colorRed);
+background-color:  var(--colorBrown);
 
 
 }
