@@ -75,19 +75,32 @@
     </script>
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-            </div>
-            </div>
-        </nav>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>
+        <a class="navbar-brand" href="#"><img src="./afbeeldingen/noodlebowl.gif" height="50px"></a>
+       <div class="container_Big" style="padding-left:60%;">
+         <button>login</button>
+        <button>registreren</button>
+        <button> <img src="./afbeeldingen/street-food-cart.png" height="50px"></button>
+        </div>
+        </div>
+     
+    <!-- <img src="/afbeeldingen/pusheen.gif" alt="cat"> -->
+    <div class="container_Big">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Hotpot</a>
+            <a class="nav-item nav-link" href="#">Sushi</a>
+            <a class="nav-item nav-link" href="noodeles.html">noodels</a>
+            <a class="nav-item nav-link" href="Hotpot.html">Hotpot</a>
+          </div>
+        </div>
+      </nav>
 
     <div class="container_Big" style="background-color: var(--ColorGray);">
 
@@ -108,7 +121,7 @@
                                     <p>Lire plus<br>
                                         <input type="hidden" name="sProductNaam" value="sushi 1"><br>
                                         <input type="hidden" name="fPrijs" value="3.52"><br>
-                                        <input type="number" name="iAantal">
+                                        <input type="number" name="iAantal" required>
                                         <button type="submit" onclick="ReloadPage()">add to kart</button>
                                     </p>
                                 </div>
@@ -124,7 +137,7 @@
                                     <p>Lire plus<br>
                                         <input type="hidden" name="sProductNaam" value="sushi 2"><br>
                                         <input type="hidden" name="fPrijs" value="3.52"><br>
-                                        <input type="number" name="iAantal">
+                                        <input type="number" name="iAantal" required>
                                         <button type="submit" onclick="ReloadPage()">add to kart</button>
                                     </p>
                                 </div>
@@ -142,7 +155,7 @@
                                     <p>Lire plus<br>
                                         <input type="hidden" name="sProductNaam" value="sushi 3"><br>
                                         <input type="hidden" name="fPrijs" value="3.52"><br>
-                                        <input type="number" name="iAantal">
+                                        <input type="number" name="iAantal" required>
                                         <button type="submit" onclick="ReloadPage()">add to kart</button>
                                     </p>
                                 </div>
@@ -158,7 +171,7 @@
                                     <p>Lire plus<br>
                                         <input type="hidden" name="sProductNaam" value="sushi 4"><br>
                                         <input type="hidden" name="fPrijs" value="3.52"><br>
-                                        <input type="number" name="iAantal">
+                                        <input type="number" name="iAantal" required>
                                         <button type="submit" onclick="ReloadPage()">add to kart</button>
                                     </p>
                                 </div>
