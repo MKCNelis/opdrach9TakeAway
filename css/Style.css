@@ -11,12 +11,12 @@
 
 /* bodystyling */
 body{
-background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
-background-size: 375px 187.5px;
-animation: swiper 6s infinite linear;
-background-position: 0%,0%;
-
-
+    background-color: var(--colorRed);
+    background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
+    background-size: 375px 187.5px;
+    animation: swiper 6s infinite linear;
+    background-position: 0%,0%;
+    background-color: linear-gradient(90deg, rgba(158, 139, 104, 1) 0%, rgba(204, 7, 1, 0.5) 50%, rgba(158, 139, 104, 1) 100%);
 }
 
 @keyframes swiper{
@@ -26,8 +26,8 @@ background-position: 0%,0%;
     }
 
     25%{
-background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
- background-position: 187.5px 187.5px,93.75px 93.75px;
+        background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
+        background-position: 187.5px 187.5px,93.75px 93.75px;
     }
 
     50%{
@@ -41,8 +41,8 @@ background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.
     }
 
     100%{
-            background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
-                background-position: 750px 750px,375px 375px;
+        background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
+        background-position: 750px 750px,375px 375px;
     }
 }
 
@@ -164,41 +164,56 @@ div {
 }
 
 #complete {
-    height: 50px;
+    height: 10%;
     width: 50px;
     background-color: var(--colorRed);
-    animation: waiting 5s infinite;
+    animation: waiting 5s infinite linear;
     
 }
 
 @keyframes waiting {
     0%{
         margin-left: 10%;
-        margin-top: 0%;
-        rotate: 90deg;
+        height: 50px;
+    }
+    
+    12.5%{
+        margin-left: 32.5%;
+        height: 50px;
     }
 
     25%{
-        margin-left: 20%;
-        margin-top: 0%;
-        rotate: 90deg;
+        margin-left: 45%;
+        height: 100px;
+    }
+
+    37.5%{
+        margin-left: 57.5%;
+        height: 50px;
     }
 
     50%{
-        margin-left: 20%;
-        margin-top: 10%;
-        rotate: 90deg;
+        margin-left: 80%;
+    }
+
+    62.5%{
+        margin-left: 57.5%;
+        height: 50px;
     }
 
     75%{
-        margin-left: 10%;
-        margin-top: 10%;
-        rotate: 90deg;
+        margin-left: 45%;
+        height: 100px;
+    }
+
+    87.5%{
+        margin-left: 32.5%;
+        height: 50px;
     }
 
     100%{
         margin-left: 10%;
-        margin-top: 0%;
+        height: 50px;
     }
 }
 
@@ -267,3 +282,4 @@ span {
     border: 5px;
     box-shadow: 0 0 8px 8px var(--colorRed) inset;
 }
+

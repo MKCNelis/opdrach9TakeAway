@@ -111,3 +111,15 @@
     </script>
 
 </html>
+
+<!--
+                <div>
+                    Betalingsmethode:<br>
+                    <label for='payment_0'><button class='MethodeKnoppen'>
+                        <input type='radio' id='payment_0' name='iBetalingsMethode' value='0'>Paypal</button><br></label>   <!--value 0 = PayPal-->
+                        <label for='payment_1'><button class='MethodeKnoppen'>
+                        <input type='radio' id='payment_1' name='iBetalingsMethode' value='1'>Ideal</button><br></label>   <!--value 1 = Ideal-->
+                    <label for='payment_2'><button class='MethodeKnoppen'>
+                        <input type='radio' id='payment_2' name='iBetalingsMethode' value='2'>AmazonPay</button><br></label>   <!--value 2 = AmazonPay-->
+                </div>
+-->

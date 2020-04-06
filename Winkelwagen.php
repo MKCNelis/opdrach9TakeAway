@@ -112,17 +112,15 @@
                 </div>
                 <div>
                     Betalingsmethode:<br>
-                    <?php
-                        echo("<button class='MethodeKnoppen'><input type='radio' id='0'
-                             name='iBetalingsMethode' value='0'> 
-                             <label for='0'>Paypal</label></button><br>"                                  //value 0 = PayPal
-                            ."<button class='MethodeKnoppen'><input type='radio' id='1'
-                             name='iBetalingsMethode' value='1'> 
-                             <label for='1'>Ideal</label></button><br>"                                   //value 1 = Ideal
-                            ."<button class='MethodeKnoppen'><input type='radio' id='2'
-                             name='iBetalingsMethode' value='2'> 
-                             <label for='2'>AmazonPay</label></button><br>");                             //value 2 = AmazonPay
-                    ?>
+                    <button class='MethodeKnoppen'><input type='radio' id='0'
+                    name='iBetalingsMethode' value='0'> 
+                    <label for='0'>Paypal</label></button><br>
+                    <button class='MethodeKnoppen'><input type='radio' id='1'
+                    name='iBetalingsMethode' value='1'> 
+                    <label for='1'>Ideal</label></button><br>
+                    <button class='MethodeKnoppen'><input type='radio' id='2'
+                    name='iBetalingsMethode' value='2'> 
+                    <label for='2'>AmazonPay</label></button><br>
                 </div>
 
             </div>
