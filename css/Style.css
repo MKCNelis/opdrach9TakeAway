@@ -250,6 +250,7 @@ span {
     width: 80%;
     margin: 0px auto;
     position: relative;
+    background-color: var(--colorSand);
 }
 
 .aligner{
