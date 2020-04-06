@@ -1,4 +1,3 @@
-
 :root{
 /* root colors */
    --mainPrimaryColor      :White;
@@ -22,7 +21,7 @@ background-position: 0%,0%;
 
 @keyframes swiper{
     0%{
-        background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
+        background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
         background-position: 0% 0%,0% 0%;
     }
 
@@ -56,7 +55,7 @@ div {
     width: 240px;
 }
   
-  .article-image:before {
+.article-image:before {
     content: '';
     position: absolute;
     height: 100%;
@@ -73,7 +72,7 @@ div {
     background-repeat: no-repeat;
 }
 
-  .article-image:hover:before {
+.article-image:hover:before {
     -webkit-filter: grayscale(100%) blur(2px);
     filter: grayscale(100%) blur(2px);
     transition: .4s ease-in-out;
@@ -81,17 +80,19 @@ div {
     width: 480px;
 }
 
-  .ar-image {
+.ar-image {
     position: relative;
     width: 238px;
     height: 150px;
 }
 
-  .article-image > p {
+.article-image > p,
+.article-image > input {
     display: none;
 }
 
-  .article-image:hover > p {
+.article-image:hover > p,
+.article-image:hover > input {
     position: absolute;
     top: 40%;
     display: block;
@@ -103,6 +104,20 @@ div {
     height: 100%;
     text-align: center;
     transition: .4s ease-in-out;
+}
+
+.article-image:hover > button {
+    background-color: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    border: 5px dashed var(--colorRed);
+    border-radius: 100%;
+}
+
+#bConfirmation {
+    position: fixed;
+
 }
 
 /* .box{
@@ -152,39 +167,38 @@ div {
     height: 50px;
     width: 50px;
     background-color: var(--colorRed);
-    position: fixed;
     animation: waiting 5s infinite;
     
 }
 
 @keyframes waiting {
     0%{
-        right: 10%;
-        top: 25%;
+        margin-left: 10%;
+        margin-top: 0%;
         rotate: 90deg;
     }
 
     25%{
-        right: 20%;
-        top: 25%;
+        margin-left: 20%;
+        margin-top: 0%;
         rotate: 90deg;
     }
 
     50%{
-        right: 20%;
-        top: 35%;
+        margin-left: 20%;
+        margin-top: 10%;
         rotate: 90deg;
     }
 
     75%{
-        right: 10%;
-        top: 35%;
+        margin-left: 10%;
+        margin-top: 10%;
         rotate: 90deg;
     }
 
     100%{
-        right: 10%;
-        top: 25%;
+        margin-left: 10%;
+        margin-top: 0%;
     }
 }
 

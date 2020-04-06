@@ -63,7 +63,7 @@
         </nav>
         
         <div class="row justify-content-center page-content">
-            <div class="Winkelmandje col-7">
+            <div class="Winkelmandje col-7" style="background-color: var(--ColorGray);">
                 <table>
                     <tr>
                         <th width="90%">Product</th>
@@ -75,8 +75,8 @@
                             foreach($aWinkelwagen as $iKey => $aContentArray) {
                                 echo("<tr>"
                                 ."<td>".$aContentArray[0]."</td>"                                                 //Product naam
-                                ."<td align='right'>".number_format($aContentArray[2], 2, ".", "")."</td>"        //Product prijs
-                                ."<td align='right'>".$aContentArray[1]."</td>"                                   //Aantal in winkelwagen
+                                ."<td align='right'>".$aContentArray[1]."</td>"                                   //Product prijs
+                                ."<td align='right'>".$aContentArray[2]."</td>"                                   //Aantal in winkelwagen
                                 ."</tr>");
                                 $iTotaal = number_format($iTotaal+($aContentArray[2]*$aContentArray[1]), 2, ".", "");
                             }
@@ -88,7 +88,7 @@
                 </table>
             </div>
 
-            <div class="Winkelmandje col-3">
+            <div class="Winkelmandje col-3" style="background-color: var(--ColorGray);">
                 <div>
                     <?php
                         foreach($aWinkelwagen as $iKey => $aContentArray) {
