@@ -1,3 +1,56 @@
+<?php
+    //function to save the array the 'winkelwagen.json' file
+    function SaveArray($p_aSaveArray) {
+        //change string into json compatible data
+        $aJSONArray = json_encode($p_aSaveArray);
+        //open the file in writing mode
+        $file = fopen('winkelwagen.json','w');
+        //change the files content of the opened file to what it already was + the new array
+        file_put_contents('winkelwagen.json', $aJSONArray);
+        //close the file
+        fclose($file);
+    }
+
+    //function to load the 'winkelwagen.json' file
+    function LoadArray() {
+        //open the file in reading mode
+        $file = fopen('winkelwagen.json','r');
+        //get the content of the opened file
+        $aJSONArray = file_get_contents('winkelwagen.json');
+        //change the read string to php compatible data
+        $aReadArray = json_decode($aJSONArray,TRUE);
+        //close the file
+        fclose($file);
+        //save the loaded data to be used in the page
+        return($aReadArray);
+    }
+
+    //function to clear the 'winkelwagen.json' file
+    function ClearArray() {
+        //open the file in writing mode
+        $file = fopen('winkelwagen.json','r');
+        //clear the file
+        file_put_contents('');
+        //run the function to reload the page
+        PlaceOrder();
+    }
+
+    if(!empty($_POST)){
+        $sProductNaam   = $_POST['sProductNaam'];
+        $fPrijs         = $_POST['fPrijs'];
+        $iAantal        = $_POST['iAantal'];
+        
+        $aWinkelwagen = LoadArray();
+        $iRecordCounter = count($aWinkelwagen);
+        $aWinkelwagen[$iRecordCounter] = array($sProductNaam,$fPrijs,$iAantal);
+        //save the array to the file
+        SaveArray($aWinkelwagen);
+        // header('location: sushi.php');
+        echo('<script>ReloadPage()</script>');
+    }
+    $iTotaal = 0;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,24 +115,35 @@
     </div>
     <br>
     <div class="box boxbackground hiddentext">
-        <h>
-            Dah food
-        </h>
-        <br>
-        <br>
-        <img src="afbeeldingen/masaaki-komori-2TjDelq95rc-unsplash.jpg" height="500px">
-          <p>
-          Al 20 jaar een begrip in het centrum van Heerlen
-          <br>De hotspotvoor AsianCuisine
-          <br>Klanten hadden behoefte aan take away
-          <br>2 jaar lang telefonische takeaway bestellingen
-          <br>Nu wilt Hot Pot een online take awayomgeving
-          <br>Bestellen van iconische gerechten
-          <br>Bestellen van pakketten instant noodles(nevenproducten)
-          <!-- <form>
-            <input type="number"name=""><input type="checkbox" name="">
-          </form> -->
-          </p>
+        <form method="POST">
+            <div>              
+                <div class="ar-image" id="noodele2">
+                    <div class="article-image">
+                      <h>
+                          Dah food
+                      </h>
+                      <br>
+                      <br>
+                        <p>
+                        Al 20 jaar een begrip in het centrum van Heerlen
+                        <br>De hotspotvoor AsianCuisine
+                        <br>Klanten hadden behoefte aan take away
+                        <br>2 jaar lang telefonische takeaway bestellingen
+                        <br>Nu wilt Hot Pot een online take awayomgeving
+                        <br>Bestellen van iconische gerechten
+                        <br>Bestellen van pakketten instant noodles(nevenproducten)
+                        <!-- <form>
+                          <input type="number"name=""><input type="checkbox" name="">
+                        </form> -->
+                        </p>
+                        <input type="hidden" name="sProductNaam" value="sushi 2"><br>
+                        <input type="hidden" name="fPrijs" value="3.52"><br>
+                        <input type="number" name="iAantal" required>
+                        <button type="submit" onclick="ReloadPage()">add to kart</button>
+                  </div>
+              </div>
+          </div>
+      </form>
 
    </div>
    <br><br>

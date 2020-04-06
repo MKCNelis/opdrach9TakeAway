@@ -72,7 +72,7 @@ div {
     background-repeat: no-repeat;
 }
 
-.article-image:hover:before {
+.article-image:hover:before > {
     -webkit-filter: grayscale(100%) blur(2px);
     filter: grayscale(100%) blur(2px);
     transition: .4s ease-in-out;

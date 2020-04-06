@@ -72,10 +72,6 @@
                 <button id="bCancel"></button>';
             document.getElementById('bConfirmation').htmlstyle
         }
-        
-    function PlaceOrder() {
-        document.reload();
-    }
     </script>
 </head>
 <body>
@@ -136,7 +132,7 @@
                 <div class="col-6">
                     <form method="POST">
                         <div>              
-                            <div class="ar-image">
+                            <div class="ar-image" id="sushi2">
                                 <div class="article-image">
                                     <p>Lire plus<br>
                                         <input type="hidden" name="sProductNaam" value="sushi 2"><br>
