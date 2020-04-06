@@ -72,6 +72,10 @@
                 <button id="bCancel"></button>';
             document.getElementById('bConfirmation').htmlstyle
         }
+        
+    function PlaceOrder() {
+        document.reload();
+    }
     </script>
 </head>
 <body>
