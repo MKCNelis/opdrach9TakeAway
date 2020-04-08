@@ -268,3 +268,13 @@ span {
     border: 5px;
     box-shadow: 0 0 8px 8px var(--colorRed) inset;
 }
+
+
+.backgound-dragon{
+    background-image: url(../afbeeldingen/Afbeelding1.1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-blend-mode: darken;
+}
+
+
