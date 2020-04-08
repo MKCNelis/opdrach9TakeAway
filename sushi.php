@@ -100,8 +100,8 @@
             <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">Hotpot</a>
             <a class="nav-item nav-link" href="#">Sushi</a>
-            <a class="nav-item nav-link" href="noodeles.html">noodels</a>
-            <a class="nav-item nav-link" href="Hotpot.html">Hotpot</a>
+            <a class="nav-item nav-link" href="noodles.php">noodels</a>
+            <a class="nav-item nav-link" href="Hotpot.php">Hotpot</a>
           </div>
         </div>
       </nav>
