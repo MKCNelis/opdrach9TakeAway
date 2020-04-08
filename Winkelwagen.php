@@ -27,7 +27,7 @@
 
     if(!empty($_POST['finish'])) {
         ClearArray();
-        header('location: winkelwagen.php');
+        header('location: index.html');
     }
 ?>
 
