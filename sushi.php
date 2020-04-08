@@ -35,7 +35,7 @@
         $aWinkelwagen[$iRecordCounter] = array($sProductNaam,$fPrijs,$iAantal);
         //save the array to the file
         SaveArray($aWinkelwagen);
-        // header('location: winkelwagen.php');
+        header('location: winkelwagen.php');
     }
     $iTotaal = 0;
 ?>
