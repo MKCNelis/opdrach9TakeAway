@@ -1,4 +1,4 @@
-:root{
+:root {
 /* root colors */
    --mainPrimaryColor      :White;
    --ColorGray             :#D2D5CE; 
@@ -10,7 +10,7 @@
 }
 
 /* bodystyling */
-body{
+body {
     background-color: var(--colorRed);
     background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
     background-size: 375px 187.5px;
@@ -19,28 +19,28 @@ body{
     background-color: linear-gradient(90deg, rgba(158, 139, 104, 1) 0%, rgba(204, 7, 1, 0.5) 50%, rgba(158, 139, 104, 1) 100%);
 }
 
-@keyframes swiper{
-    0%{
+@keyframes swiper {
+    0% {
         background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
         background-position: 0% 0%,0% 0%;
     }
 
-    25%{
+    25% {
         background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
         background-position: 187.5px 187.5px,93.75px 93.75px;
     }
 
-    50%{
+    50% {
         background-image: url(../afbeeldingen/pusheen2.gif),url(../afbeeldingen/pusheen.gif);
         background-position: 375px 375px,187.5px 187.5px;
     }
 
-    75%{
+    75% {
         background-image: url(../afbeeldingen/pusheen2.gif),url(../afbeeldingen/pusheen.gif);
         background-position: 562.5px 562.5px,281.25px 281.25px;
     }
 
-    100%{
+    100% {
         background-image: url(../afbeeldingen/pusheen.gif),url(../afbeeldingen/pusheen2.gif);
         background-position: 750px 750px,375px 375px;
     }
@@ -72,7 +72,7 @@ div {
     background-repeat: no-repeat;
 }
 
-.article-image:hover:before > {
+.article-image:hover:before {
     -webkit-filter: grayscale(100%) blur(2px);
     filter: grayscale(100%) blur(2px);
     transition: .4s ease-in-out;
@@ -157,63 +157,66 @@ div {
     min-height: 250px;
 } 
 
+.added-page-content {
+    min-height: 50px;
+}
+
 .MethodeKnoppen {
     width:          50%;
     margin-left:    5%;
-    
+    border: 1px black solid;
+    background-color: var(--colorBrown);
 }
 
 #complete {
-    height: 10%;
+    height: 25%;
     width: 50px;
     background-color: var(--colorRed);
-    animation: waiting 5s infinite linear;
-    
+    animation: waiting 6s infinite linear;
+}
+
+#checkout {
+    background-color: var(--ColorGray);
+    border: var(--colorMustard) 5px;
+    transition: all 2s;
+    height: 25%;
 }
 
 @keyframes waiting {
-    0%{
+    0% {
         margin-left: 10%;
-        height: 50px;
     }
     
-    12.5%{
+    12.5% {
         margin-left: 32.5%;
-        height: 50px;
     }
 
-    25%{
+    25% {
         margin-left: 45%;
-        height: 100px;
     }
 
-    37.5%{
+    37.5% {
         margin-left: 57.5%;
-        height: 50px;
     }
 
-    50%{
+    50% {
         margin-left: 80%;
     }
 
-    62.5%{
+    62.5% {
         margin-left: 57.5%;
-        height: 50px;
     }
 
-    75%{
+    75% {
         margin-left: 45%;
-        height: 100px;
     }
 
-    87.5%{
+    87.5% {
         margin-left: 32.5%;
-        height: 50px;
     }
 
-    100%{
+    100% {
         margin-left: 10%;
-        height: 50px;
     }
 }
 
@@ -254,13 +257,13 @@ span {
     background-repeat: no-repeat;
 }  */
 
-.pagewidth{
+.pagewidth {
     width: 80%;
     margin-left: 10%; 
     margin-right: 10%;
 }
 
-.container_Big{
+.container_Big {
     
     width: 80%;
     margin: 0px auto;
@@ -268,18 +271,37 @@ span {
     background-color: var(--colorSand);
 }
 
-.aligner{
+.aligner {
     text-align: right;
 }
 
-.alignerboxes{
+.alignerboxes {
     padding: 4%;
 }
 
-.roundimage{
+.roundimage {
     border-bottom-left-radius: 70%;
     border-left: var(--ColorGray);
     border: 5px;
     box-shadow: 0 0 8px 8px var(--colorRed) inset;
 }
 
+#screenFilling {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    padding: 15%;
+    color: var(--colorRed);
+    background-color: var(--colorBrown);
+    opacity: 0.75;
+    z-index: 3;
+}
+
+#screenFilling::content {
+    margin-top: 20%;
+    margin-left:20%;
+    opacity: 0;
+    color: var(--colorRed);
+}

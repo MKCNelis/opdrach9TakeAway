@@ -16,20 +16,20 @@
 
     function ClearArray() {
         //open the file in writing mode
-        $file = fopen('winkelwagen.json','r');
+        $file = fopen('winkelwagen.json','w');
         //clear the file
-        file_put_contents('');
+        // file_put_contents('winkelwagen.json',"");
+        fclose($file);
     }
-
+    
     $aWinkelwagen = LoadArray();
     $iTotaal = 0;
-?>
 
-<script>
-    function PlaceOrder() {
-        document.reload();
+    if(!empty($_POST['finish'])) {
+        ClearArray();
+        header('location: winkelwagen.php');
     }
-</script>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,12 +50,12 @@
     <body>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>
             <a class="navbar-brand" href="index.html"><img src="./afbeeldingen/noodlebowl.gif" height="50px"></a>
-        <div class="container_Big" style="padding-left:60%;">
-            <button>login</button>
-            <button>registreren</button>
-            <button> <img src="./afbeeldingen/street-food-cart.png" height="50px"></button>
+            <div class="container_Big" style="padding-left:60%;">
+                <button>login</button>
+                <button>registreren</button>
+                <a href="winkelwagen.php"><button><img src="./Afbeeldingen/street-food-cart.png" height="50px"></button></a>
             </div>
-            </div>
+        </div>
         
         <!-- <img src="/afbeeldingen/pusheen.gif" alt="cat"> -->
         <div class="container_Big">
@@ -67,10 +67,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Hotpot</a>
                 <a class="nav-item nav-link" href="sushi.php">Sushi</a>
-                <a class="nav-item nav-link" href="noodeles.html">noodels</a>
-                <a class="nav-item nav-link" href="Hotpot.html">Hotpot</a>
+                <a class="nav-item nav-link" href="noodles.php">noodels</a>
+                <a class="nav-item nav-link" href="hotpot.php">Hotpot</a>
             </div>
             </div>
         </nav>
@@ -104,32 +103,50 @@
             <div class="Winkelmandje col-3" style="background-color: var(--ColorGray);">
                 <div>
                     <?php
-                        foreach($aWinkelwagen as $iKey => $aContentArray) {
-                            echo("€".number_format(($aContentArray[2]*$aContentArray[1]), 2, '.', '')."<br>");
+                        if(!empty($aWinkelwagen[0])) {
+                            foreach($aWinkelwagen as $iKey => $aContentArray) {
+                                echo("€".number_format(($aContentArray[2]*$aContentArray[1]), 2, '.', '')."<br>");
+                            }
                         }
                         echo("<b>€".number_format(($iTotaal), 2, ".", "")."</b>");
                     ?>
                 </div>
-                <div>
-                    Betalingsmethode:<br>
-                    <button class='MethodeKnoppen'><input type='radio' id='0'
-                    name='iBetalingsMethode' value='0'> 
-                    <label for='0'>Paypal</label></button><br>
-                    <button class='MethodeKnoppen'><input type='radio' id='1'
-                    name='iBetalingsMethode' value='1'> 
-                    <label for='1'>Ideal</label></button><br>
-                    <button class='MethodeKnoppen'><input type='radio' id='2'
-                    name='iBetalingsMethode' value='2'> 
-                    <label for='2'>AmazonPay</label></button><br>
+                <div class="row added-page-content">
+                    <div>
+                        <h5>Betalingsmethode:</h5><br>
+                        <!-- <form method="POST"> -->
+                            <div onclick="completePurchase()" class='MethodeKnoppen'><input type='radio' id='0'
+                            name='iBetalingsMethode' value='0'> 
+                            <label for='0'>Paypal</label></button></div>
+                            <div onclick="completePurchase()" class='MethodeKnoppen'><input type='radio' id='1'
+                            name='iBetalingsMethode' value='1'> 
+                            <label for='1'>Ideal</label></button></div>
+                            <div onclick="completePurchase()" class='MethodeKnoppen'><input type='radio' id='2'
+                            name='iBetalingsMethode' value='2'> 
+                            <label for='2'>Amazon Pay</label></div>
+                        <!-- </form> -->
+                    </div>
                 </div>
-
             </div>
+            <div id="spacing"></div>
+            <div id="complete"></div>
+                <div>
         </div>
-
-        <div id="complete">
         </div>
 
         
     </body>
+
+    <script>
+        function completePurchase() {
+            document.getElementById('spacing').className= "col-7";
+            document.getElementById('complete').className= "col-3";
+            document.getElementById('complete').id= "checkout";
+            document.getElementById('checkout').innerHTML= "<br><button type='submit' onclick='proceed()' value='checkout'>checkout</button>";
+        }
+        function proceed() {
+            document.getElementById('spacing').innerHTML = "<div id='screenFilling'><div class='row justify-content-center'><div class='col-5'>come at me bro<br><a href='./noodles.php'><button>add more noodles to the cart</button></a><form method='POST'><input type='hidden' name='finish' value='TRUE'><button type='submit'>afrekenen</button></form></div></div></div>"
+        }
+    </script>
 
 </html>

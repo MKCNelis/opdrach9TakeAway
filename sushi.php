@@ -66,12 +66,12 @@
     <body>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>
             <a class="navbar-brand" href="#"><img src="./afbeeldingen/noodlebowl.gif" height="50px"></a>
-        <div class="container_Big" style="padding-left:60%;">
-            <button>login</button>
-            <button>registreren</button>
-            <button> <img src="./afbeeldingen/street-food-cart.png" height="50px"></button>
+            <div class="container_Big" style="padding-left:60%;">
+                <button>login</button>
+                <button>registreren</button>
+                <a href="winkelwagen.php"><button><img src="./Afbeeldingen/street-food-cart.png" height="50px"></button></a>
             </div>
-            </div>
+        </div>
         
         <!-- <img src="/afbeeldingen/pusheen.gif" alt="cat"> -->
         <div class="container_Big">
@@ -83,10 +83,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Hotpot</a>
-                <a class="nav-item nav-link" href="#">Sushi</a>
-                <a class="nav-item nav-link" href="noodeles.html">noodels</a>
-                <a class="nav-item nav-link" href="Hotpot.html">Hotpot</a>
+                <a class="nav-item nav-link" href="sushi.php">Sushi</a>
+                <a class="nav-item nav-link" href="noodeles.php">noodels</a>
+                <a class="nav-item nav-link" href="Hotpot.php">Hotpot</a>
             </div>
             </div>
         </nav>

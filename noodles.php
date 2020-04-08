@@ -80,7 +80,7 @@ $iTotaal = 0;
 <div class="container_Big" style="padding-left:60%;">
     <button>login</button>
     <button>registreren</button>
-    <button> <img src="./Afbeeldingen/street-food-cart.png" height="50px"> </button>
+    <a href="winkelwagen.php"><button><img src="./Afbeeldingen/street-food-cart.png" height="50px"></button></a>
 </div>
 </div>
 <div class="container_Big">
@@ -93,8 +93,7 @@ $iTotaal = 0;
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Hotpot</a>
-                <a class="nav-item nav-link" href="#">Sushi</a>
+                <a class="nav-item nav-link" href="sushi.php">Sushi</a>
                 <a class="nav-item nav-link" href="noodles.php">noodles</a>
                 <a class="nav-item nav-link" href="Hotpot.php">Hotpot</a>
             </div>
