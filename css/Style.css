@@ -256,6 +256,45 @@ span {
     background-size: 450px 300px;
     background-repeat: no-repeat;
 }  */
+body{
+background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
+background-size: 500px 250px;
+animation: swiper 6s infinite linear;
+background-position: 0%,0%;
+background-color: var(--colorBrown);
+
+
+}
+@keyframes swiper{
+    0%{
+background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
+ background-position: 0% 0%,0% 0%;
+    }
+    25%{
+background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
+ background-position: 250px 250px,125px 125px;
+    }
+    50%{
+        background-image: url(/afbeeldingen/pusheen2.gif),url(/afbeeldingen/pusheen.gif);
+        background-position: 500px 500px,250px 250px;
+    }
+    75%{
+        background-image: url(/afbeeldingen/pusheen2.gif),url(/afbeeldingen/pusheen.gif);
+        background-position: 750px 750px,375px 375px;
+    }
+    100%{
+            background-image: url(/afbeeldingen/pusheen.gif),url(/afbeeldingen/pusheen2.gif);
+                background-position: 1000px 1000px,500px 500px;
+    }
+}
+
+
+.box{
+    width: 200px;
+    height: 150px;
+    width: 240px;
+  }
+  
 
 .pagewidth {
     width: 80%;
@@ -263,11 +302,11 @@ span {
     margin-right: 10%;
 }
 
-.container_Big {
-    
-    width: 80%;
-    margin: 0px auto;
-    position: relative;
+.container_Big{
+
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
     background-color: var(--colorSand);
 }
 
@@ -305,3 +344,12 @@ span {
     opacity: 0;
     color: var(--colorRed);
 }
+
+.backgound-dragon{
+    background-image: url(../afbeeldingen/Afbeelding1.1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-blend-mode: darken;
+}
+
+
